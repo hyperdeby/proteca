@@ -1,0 +1,17 @@
+{
+  "FolderOrderSettings":[
+    {"name":"Cenas","order":10,"path":"folders/Cenas.yy",},
+    {"name":"Objetos","order":9,"path":"folders/Objetos.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"oFlor","order":1,"path":"objects/oFlor/oFlor.yy",},
+    {"name":"oSerra","order":2,"path":"objects/oSerra/oSerra.yy",},
+    {"name":"oSerraMov","order":3,"path":"objects/oSerraMov/oSerraMov.yy",},
+    {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"sFundo","order":4,"path":"sprites/sFundo/sFundo.yy",},
+    {"name":"sPlayer","order":1,"path":"sprites/sPlayer/sPlayer.yy",},
+    {"name":"sPlayerCorre","order":3,"path":"sprites/sPlayerCorre/sPlayerCorre.yy",},
+    {"name":"sSerra","order":2,"path":"sprites/sSerra/sSerra.yy",},
+  ],
+}
