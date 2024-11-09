@@ -1,0 +1,15 @@
+[
+ {
+   "Text_Id": "npc_1",
+   "Lines": ["Bom dia!","Nunca te vi antes.","Você é novo por aqui?"],
+   "Options": [["Sim, acabei de chegar aqui!","npc_1 - sim"],["Não. Eu já havia visitado a cidade anos atrás.","npc_1 - nao"]],
+ },
+ {
+   "Text_Id": "npc_1 - sim",
+   "Lines": ["Ah, então muito prazer.","Eu sou fulano.","Seja bem vindo a nossa cidade!"],
+ },
+ {
+   "Text_Id": "npc_1 - nao",
+   "Lines": ["É mesmo? Puxa vida.","Então deve ser por isso que não o reconheci.","De qualquer forma, bem vindo de volta a nossa cidade!"],
+ }
+]
