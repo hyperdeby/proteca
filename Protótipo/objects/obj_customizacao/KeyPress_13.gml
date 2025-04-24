@@ -1,1 +1,0 @@
-customizacaoFinalizada(opcao_selecionada);
