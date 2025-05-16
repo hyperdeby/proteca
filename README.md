@@ -1,17 +1,49 @@
-# __PROTECA__
-Código fonte do jogo proteca. O objetivo de desenvolvimento é um jogo voltado para crianças que permita conscientizar sobre estratégias de aliciamento e promover comportamentos seguros contra a violência sexual de crianças.
-As estruturas utilizadas neste repositório estão melhor descritas nas próximas seções.
+# PROTECA
 
-## Estrutura das branches
-As branches deste repositório são utilizadas, também, para salvar processos feitos apenas para estudo sobre __funções que serão implementadas__ no jogo. Sendo assim, a __função__ de cada branch é descrita abaixo.
-- main: branch base, contém apenas um projeto vazio
-- Prototipo: consolidação de tudo que foi estudado e produzido durante o desenvolvimento do jogo. No momento, tem um menu inicial, uma customização de personagens e a apresentação de um vídeo introdutório.
-- DialogSystem: branch com código fonte produzido durante estudos sobre sistemas de diálogo (e caixas de texto) em jogos. O conteúdo desta branch não tem relação com o planejado para o Jogo Proteca, ou seja, este código só será usado como referência para a implementação de diálogos no jogo final.
-- deogenes_teste, prototipo-tiago e test-branch: branches criadas para testes.
+Este repositório contém o código-fonte do jogo **Proteca**, um projeto educativo voltado para crianças, com o objetivo de **conscientizar sobre estratégias de aliciamento online** e **promover comportamentos seguros** contra a violência sexual infantil.
 
-## Estrutura das pastas
-- sprites: pasta destinada para armazenar as imagens do jogo
-- rooms: pasta destinada para armazenar os cenários
-- objects: pasta para transformar os sprites em objetos do jogo (possibilitando criar ações nos sprites)
-- sequences: pasta destinada para criar a animações (vídeos, intro...)
-- sounds: pasta destinada para armazenar os sons
+## 🎮 Objetivo
+
+Criar um jogo acessível, sensível e informativo, que utilize mecânicas simples para orientar e empoderar o público infantil, com foco em prevenção e segurança digital.
+
+## 🌿 Estrutura das Branches (GitFlow)
+
+Atualmente, o projeto segue o modelo **GitFlow**, que organiza melhor o desenvolvimento em equipe:
+
+* `main`: branch de produção — contém sempre a versão estável do jogo.
+* `develop`: branch de integração — onde funcionalidades são reunidas e testadas antes de uma nova versão.
+* `feature/*`: usada para desenvolver **novas funcionalidades** de forma isolada.
+* `release/*`: preparação para lançar uma nova versão (ajustes finais, testes, empacotamento).
+* `hotfix/*`: correções urgentes aplicadas diretamente sobre a `main`.
+
+### 🕘️ Histórico de Branches Anteriores
+
+Antes da adoção do GitFlow, algumas branches foram usadas para estudo e testes:
+
+* `Prototipo`: consolidava o que havia sido produzido até então (menu, customização, vídeo introdutório).
+* `DialogSystem`: estudo sobre sistemas de diálogo — servirá de referência, mas não faz parte do jogo final.
+* `deogenes_teste`, `prototipo-tiago`, `test-branch`: utilizadas para testes experimentais.
+
+## 📁 Estrutura de Pastas
+
+- `sprites/`: imagens do jogo.
+- `rooms/`: cenários/janelas do jogo.
+- `objects/`: onde sprites ganham comportamento e interatividade.
+- `scripts/`: scripts de lógica do jogo.
+- `options/`: configurações do projeto.
+- `fonts/`: fontes utilizadas no jogo.
+- `datafiles/`: arquivos auxiliares do GameMaker.
+- `docs/`: **artefatos de documentação**, como:
+  - [`requisitos_proteca.md`](docs/requisitos_proteca.md): requisitos funcionais, não funcionais e de processo.
+  - [`processo_desenvolvimento.md`](docs/processo_desenvolvimento.md): etapas e fluxo do desenvolvimento do jogo.
+  - Diagramas de processo
+  - Relatórios e planejamentos
+
+## 📝 Documentação
+
+A pasta [`docs/`](./docs) centraliza todos os documentos técnicos e organizacionais do projeto. Destaques:
+
+- O **[diagrama de processo geral](docs/processo_geral.png)** ilustra visualmente as etapas do desenvolvimento.
+- O arquivo [`processo_desenvolvimento.md`](docs/processo_desenvolvimento.md) detalha cada fase (requisitos, codificação, playtest, etc.).
+- O arquivo [`requisitos_proteca.md`](docs/requisitos_proteca.md) lista todos os requisitos mapeados a partir do GDD.
+
