@@ -46,7 +46,6 @@ Antes da adoção do GitFlow, algumas branches foram usadas para estudo e testes
 
 A pasta [`docs/`](./docs) centraliza todos os documentos técnicos e organizacionais do projeto. Destaques:
 
-- O **[diagrama de processo geral](docs/processo_geral.png)** ilustra visualmente as etapas do desenvolvimento.
 - O arquivo [`processo_desenvolvimento.md`](docs/processo_desenvolvimento.md) detalha cada fase (requisitos, codificação, playtest, etc.).
 - O arquivo [`requisitos_proteca.md`](docs/requisitos_proteca.md) lista todos os requisitos mapeados a partir do GDD.
 
