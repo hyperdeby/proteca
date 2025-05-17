@@ -2,6 +2,9 @@
 
 Este repositório contém o código-fonte do jogo **Proteca**, um projeto educativo voltado para crianças, com o objetivo de **conscientizar sobre estratégias de aliciamento online** e **promover comportamentos seguros** contra a violência sexual infantil.
 
+> 💡 Para desenvolvedores: confira o documento [`docs/git_recomendacoes.md`](docs/git_recomendacoes.md) com orientações detalhadas sobre o fluxo Git adotado neste projeto (Git Flow) e o uso de commits semânticos.
+
+
 ## 🎮 Objetivo
 
 Criar um jogo acessível, sensível e informativo, que utilize mecânicas simples para orientar e empoderar o público infantil, com foco em prevenção e segurança digital.
