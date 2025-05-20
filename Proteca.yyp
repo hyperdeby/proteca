@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"Jogo Proteca",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -26,6 +26,7 @@
     {"$GMFolder":"","%Name":"Sons","folderPath":"folders/Sons.yy","name":"Sons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"Intro.mp4","CopyToMask":-1,"filePath":"datafiles","name":"Intro.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"License (sprite usada para o botao).txt","CopyToMask":-1,"filePath":"datafiles","name":"License (sprite usada para o botao).txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -33,10 +34,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"Jogo Proteca",
   "resources":[
+    {"id":{"name":"fnt_pressstart","path":"fonts/fnt_pressstart/fnt_pressstart.yy",},},
     {"id":{"name":"fntCustomization","path":"fonts/fntCustomization/fntCustomization.yy",},},
     {"id":{"name":"fntMenu","path":"fonts/fntMenu/fntMenu.yy",},},
     {"id":{"name":"objAuxLevel1","path":"objects/objAuxLevel1/objAuxLevel1.yy",},},

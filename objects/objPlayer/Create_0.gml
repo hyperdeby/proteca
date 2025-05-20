@@ -8,8 +8,13 @@ accessory = 0
 xScale = 2
 yScale = 2
 
-xVel = 0
-yVel = 0
+// Velocidade de movimento
+speed_move = 4;
+
+// Posições-alvo
+initialized = false;
+target_x = x;
+target_y = y;
 
 life = 100
 score = 0

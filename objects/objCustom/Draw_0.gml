@@ -26,9 +26,15 @@ var yDisplacement = 80
 draw_set_font(fntCustomization)
 draw_set_color(c_black)
 
+var xButtonOptions = room_width - buttonWidth - 20
+
 // se o menu selecionado for o de partes do corpo, desenha a flecha
 if (currentMenu == 0) {
 	draw_sprite(sprArrow, 0, xButtonMenu+(buttonWidth-sprite_get_width(sprArrow))/2, yButton-35)
+}
+// se o menu selecionado for o de opções dentro de uma parte do corpo, desenha a flecha
+else {
+	draw_sprite(sprArrow, 0, xButtonOptions+(buttonWidth-sprite_get_width(sprArrow))/2 ,yButton-35)
 }
 
 // loop que desenha botoes e opcoes
@@ -59,13 +65,6 @@ for (var i = 0; i < array_length(feature); i++) {
 		draw_set_color(c_black)
 		draw_set_alpha(1)
 	}
-}
-
-var xButtonOptions = room_width - buttonWidth - 20
-
-// se o menu selecionado for o de opções dentro de uma parte do corpo, desenha a flecha
-if (currentMenu == 1) {
-	draw_sprite(sprArrow, 0, xButtonOptions+(buttonWidth-sprite_get_width(sprArrow))/2 ,yButton-35)
 }
 
 for (var i = 0; i < array_length(feature[selectedPart]); i++) {
