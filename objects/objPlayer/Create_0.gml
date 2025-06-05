@@ -15,6 +15,8 @@ speed_move = 4;
 initialized = false;
 target_x = x;
 target_y = y;
+stored_target_x = x 
+stored_target_y = y 
 
 life = 100
 score = 0

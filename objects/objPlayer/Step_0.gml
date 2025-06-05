@@ -1,8 +1,14 @@
-if (!initialized){
+/// @description Verifica movimentação do jogador
+if (global.pause) 
+	exit;
+
+
+if (!initialized) {
 	target_x = x;
 	target_y = y;
 	initialized = true;
 }
+
 var dx = target_x - x;
 var dy = target_y - y;
 var distance  = point_distance(x, y, target_x, target_y);
@@ -19,8 +25,8 @@ if (distance > tolerance && distance > speed_move) {
 
 // no clique ele define o target_x e target_y e verifica a posição para o player nao sair da tela
 if (mouse_check_button_pressed(mb_left)) {
-    target_x = mouse_x;
-    target_y = mouse_y;
+	target_x = mouse_x;
+	target_y = mouse_y;
 	
 	if (target_x > (room_width - (sprite_get_width(sprBlouses)/2))){
 		target_x = room_width - sprite_get_width(sprBlouses) / 2;

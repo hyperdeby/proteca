@@ -19,15 +19,18 @@ for (var i = 0; i < numOptions; i++) {
 	var x2 = guiHalfWidth + strHalfWidth;
 	var y2 = guiHalfHeight + strHeight/2 + (i * strHeight)
 
+	// Verifica se a opção atual foi selecionada pelo mouse
 	if (point_in_rectangle(mx, my, x1, y1, x2, y2)) {
 		selectedOption = i
 		if (mouse_check_button_pressed(mb_left))
 			menuSelection(selectedOption)
 	}
 	
+	// Verifica se a opção atual foi selecionada pelo teclado
 	if (keyboard_check_pressed(vk_enter))
 		menuSelection(selectedOption)
 	
+	// Destaca a opção selecionada
 	if (selectedOption == i) {
 		draw_set_alpha(1)
 	} else {
