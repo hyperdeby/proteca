@@ -25,7 +25,9 @@ function Inventory() constructor{
 	
 	static inspect_item = function(index_slot) {
 		if (index_slot >= 0 && index_slot <= max_slots && slots[index_slot] != -1) {
-			show_message("Inspect Item")	
+			var item := slots[index_slot];
+			show_message("Inspect Item")
+			return item
 		}
 	}
 	

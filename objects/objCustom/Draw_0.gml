@@ -110,17 +110,17 @@ var TEXT_OFFSET_Y = 0.04; // % da altura da tela para deslocamento do texto
 
 // desenha botão de finalização
 var finish_text := "Continuar"
-var x_finishButton := room_width * (1 - MARGIN) - buttonWidth - 20;
 var y_finishButton := room_height * (1 - MARGIN) - buttonHeight;
 
-draw_sprite_ext(sprButton, 0, x_finishButton, y_finishButton , 1, 1, 0, -1, 1)
+draw_sprite_ext(sprButton, 0, xRightColumn, y_finishButton , 1, 1, 0, -1, 1)
 
 //centralizar texto
-var xStr_finish = x_finishButton + (buttonWidth - string_width(finish_text)) / 2;
-var yStr_finish = y_finishButton + (buttonHeight - string_height(finish_text)) / 2;
+var xStr_finish = xRightColumn - (string_width(finish_text)/2);
+var yStr_finish = y_finishButton - (string_height(finish_text)/2);
 draw_text(xStr_finish,yStr_finish, finish_text)
 
-if(point_in_rectangle(mouse_x,mouse_y, x_finishButton, y_finishButton,x_finishButton+buttonWidth,y_finishButton+buttonHeight)) {
+
+if(point_in_rectangle(mouse_x,mouse_y, xRightColumn-buttonHalfWidth, y_finishButton-buttonHalfHeight,xRightColumn+buttonWidth,y_finishButton+buttonHeight)) {
 	if(mouse_check_button_pressed(mb_left)){
 	customDone(selectedFeature)}
 }
@@ -128,7 +128,7 @@ if(point_in_rectangle(mouse_x,mouse_y, x_finishButton, y_finishButton,x_finishBu
 //texto indicando finalizacao por teclado
 var textFinish := "Pressione ENTER para continuar!";
 var x_text_finish = room_width * (1 - MARGIN) - string_width(textFinish);
-var y_text_finish = y_finishButton - room_height * TEXT_OFFSET_Y;
+var y_text_finish = y_finishButton - buttonHalfHeight - room_height * TEXT_OFFSET_Y;
 draw_text(x_text_finish, y_text_finish, textFinish);
 
 // reseta cor e fonte

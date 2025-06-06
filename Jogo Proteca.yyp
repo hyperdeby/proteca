@@ -52,7 +52,7 @@
     {"id":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
     {"id":{"name":"rmVideo","path":"rooms/rmVideo/rmVideo.yy",},},
     {"id":{"name":"customDone","path":"scripts/customDone/customDone.yy",},},
-    {"id":{"name":"inventory","path":"scripts/inventory/inventory.yy",},},
+    {"id":{"name":"inventario","path":"scripts/inventario/inventario.yy",},},
     {"id":{"name":"menuSelection","path":"scripts/menuSelection/menuSelection.yy",},},
     {"id":{"name":"spr_slot_background","path":"sprites/spr_slot_background/spr_slot_background.yy",},},
     {"id":{"name":"sprAccessories","path":"sprites/sprAccessories/sprAccessories.yy",},},
