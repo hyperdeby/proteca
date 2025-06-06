@@ -1,14 +1,24 @@
 /// @description Desenha a pausa (o botão ou o menu)
 draw_set_font(fntMenu)
 
-// (x,y) do mouse
+// x e y do mouse
 var mx = device_mouse_x_to_gui(0)
 var my = device_mouse_y_to_gui(0)
 
-// Variáveis usadas como auxiliares para desenho
+// auxiliares de tela e espaçamento
+var yMargin = 10;
 var guiHalfWidth = display_get_gui_width()/2
 var guiHalfHeight = display_get_gui_height()/2
-var strHeight = string_height("A") // 'A' foi usado porque qualquer letra tem o mesmo tamanho maximo
+
+// dimensões do botão
+var buttonWidth = sprite_get_width(sprButton)
+var buttonHalfWidth = buttonWidth / 2
+var buttonHeight = sprite_get_height(sprButton)
+var buttonHalfHeight = buttonHeight / 2
+
+// posição inicial em y do centro do primeiro botão
+// metade da tela - metade do margin (metade pra cima e metade pra baixo) - altura do botão - margin - metade do botão = y centralizado para o primeiro botão
+var yButtonStartPosition = guiHalfHeight - (yMargin / 2) - buttonHeight - yMargin - buttonHalfHeight
 
 // Variáveis usadas para desenhar o botão de pausa
 var pauseButtonHalfWidth = sprite_get_width(sprPauseButton)/2
@@ -33,40 +43,39 @@ if (!global.pause) {
 // Se o jogo está pausado, desenha as opções do menu de pausa
 draw_set_alpha(.8)
 draw_set_color(c_black)
-draw_rectangle(0,0,guiHalfWidth*2,guiHalfHeight*2, false)
+draw_rectangle(0, 0, guiHalfWidth*2, guiHalfHeight*2, false)
 draw_set_alpha(1)
-draw_set_color(c_white)
 for (var i = 0; i < numOptions; i++) {
-	var strHalfWidth = string_width(options[i]) / 2
 	
-	// Determina o ponto (x1, y1): centralizado horizontalmente, na metade de baixo da tela
-	var x1 = guiHalfWidth - strHalfWidth;
-	var y1 = guiHalfHeight - strHeight/2 + (i * strHeight)
+	// posição em y do centro do botão
+	var yButtonPosition = yButtonStartPosition + (i * (yMargin + buttonHeight))
+    draw_sprite_ext(sprButton, 0, guiHalfWidth, yButtonPosition, 1, 1, 0, -1, 1)
 
-	// Determina o ponto (x2, y2)
-	var x2 = guiHalfWidth + strHalfWidth;
-	var y2 = guiHalfHeight + strHeight/2 + (i * strHeight)
+    // define o a posição da string centralizada no botão
+	var xStr = guiHalfWidth- (string_width(options[i]) / 2)
+    var yStr = yButtonPosition - (string_height(options[i]) / 2)
 
-	// Verifica se a opção atual foi selecionada pelo mouse
-	if (point_in_rectangle(mx, my, x1, y1, x2, y2)) {
-		selectedOption = i
-		if (mouse_check_button_pressed(mb_left))
-			pauseSelection(selectedOption)
-	}
-	
-	// Verifica se a opção atual foi selecionada pelo teclado
-	if (keyboard_check_pressed(vk_enter))
-		pauseSelection(selectedOption)
-	
-	// Destaca a opção selecionada
-	if (selectedOption == i) {
-		draw_set_alpha(1)
-	} else {
-		draw_set_alpha(.7)
-	}
-		
-	
-	draw_text(x1, y1, options[i])
+    // escreve a opcao
+    draw_text(xStr, yStr, options[i])
+
+    if (point_in_rectangle(mouse_x, mouse_y, guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight)) {
+        // se selecionado, verifica se foi pressionado
+        selectedOption = i
+        if (mouse_check_button_pressed(mb_left)) {
+            pauseSelection(selectedOption)
+        }
+    }
+
+    if (keyboard_check_pressed(vk_enter))
+        pauseSelection(selectedOption)
+
+    if (selectedOption == i) {
+        draw_set_color(c_white)
+        draw_set_alpha(.5)
+        draw_rectangle(guiHalfWidth - buttonHalfWidth,  yButtonPosition - buttonHalfHeight, guiHalfWidth + buttonHalfWidth, yButtonPosition + buttonHalfHeight, false)
+        draw_set_color(c_black)
+        draw_set_alpha(1)
+    }
 }
 
 draw_set_font(-1)
